@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arte, sonido y música para la inclusión · Propuesta UMCE para Academia SENADIS</title>
+<meta name="description" content="Curso e-learning de 36 horas, 100% asincrónico, para profesionales de la educación de todo Chile: arteterapia, didáctica musical inclusiva, musicoterapia, vibroacústica, tecnología musical AUMI y neurociencia.">
+<meta property="og:title" content="Arte, sonido y música para la inclusión">
+<meta property="og:description" content="Curso e-learning de 36 horas para Academia SENADIS · UMCE">
+<meta property="og:image" content="img/og.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1b1d3a; --muted:#565b7a; --bg:#f7f6fb; --card:#ffffff; --line:#e4e2f0;
+  --indigo:#3d3a9e; --indigo-2:#2b2878; --teal:#0f8f86; --teal-soft:#e2f4f2;
+  --sun:#f2b84b; --coral:#e8735a; --lila:#efeafd; --shadow:0 10px 30px rgba(43,40,120,.10);
+  --r:22px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Plus Jakarta Sans",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;font-size:17px}
+img{max-width:100%;display:block}
+a{color:var(--indigo)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+section{padding:72px 0;scroll-margin-top:60px}
+h1,h2,h3{line-height:1.15;margin:0 0 .5em}
+h2{font-size:clamp(1.7rem,3.2vw,2.4rem);letter-spacing:-.02em}
+h3{font-size:1.2rem}
+.eyebrow{display:inline-block;font-weight:700;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin-bottom:10px}
+.lead{font-size:1.12rem;color:var(--muted);max-width:760px}
+/* barra superior */
+.top{position:sticky;top:0;z-index:20;background:rgba(247,246,251,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:60px}
+.brand{font-weight:800;font-size:.95rem;color:var(--indigo-2);text-decoration:none}
+.brand span{color:var(--teal)}
+.nav{display:flex;gap:18px;font-size:.9rem;font-weight:600}
+.nav a{text-decoration:none;color:var(--muted)}
+.nav a:hover{color:var(--indigo)}
+@media(max-width:820px){.nav{display:none}}
+/* portada */
+.hero{padding:56px 0 70px;background:radial-gradient(1200px 500px at 85% -10%,#dcd6ff 0,transparent 60%),radial-gradient(900px 500px at -10% 110%,#cdeee9 0,transparent 55%)}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}
+.hero h1{font-size:clamp(2.2rem,5vw,3.6rem);letter-spacing:-.03em;font-weight:800}
+.hero h1 em{font-style:normal;background:linear-gradient(90deg,var(--indigo),var(--teal));-webkit-background-clip:text;background-clip:text;color:transparent}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 28px}
+.chip{background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-weight:600;font-size:.88rem;box-shadow:0 2px 8px rgba(43,40,120,.05)}
+.chip b{color:var(--teal)}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:13px 22px;border-radius:14px;font-weight:700;text-decoration:none}
+.btn.pri{background:var(--indigo);color:#fff}
+.btn.pri:hover{background:var(--indigo-2)}
+.btn.sec{background:#fff;color:var(--indigo);border:1.5px solid var(--indigo)}
+.hero-img{position:relative}
+.hero-img img{border-radius:28px;box-shadow:var(--shadow);aspect-ratio:4/3.4;object-fit:cover;width:100%}
+.badge{position:absolute;left:-18px;bottom:24px;background:#fff;border-radius:18px;padding:14px 18px;box-shadow:var(--shadow);font-weight:700;font-size:.92rem;max-width:240px}
+.badge small{display:block;font-weight:500;color:var(--muted);font-size:.8rem}
+@media(max-width:880px){.hero .wrap{grid-template-columns:1fr}.badge{left:12px}}
+/* tarjetas */
+.grid{display:grid;gap:20px}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g5{grid-template-columns:repeat(5,1fr)}
+@media(max-width:980px){.g5{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:820px){.g3{grid-template-columns:1fr}}
+@media(max-width:520px){.g5{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:26px;box-shadow:0 4px 16px rgba(43,40,120,.05)}
+.ico{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;font-size:1.5rem;margin-bottom:14px}
+.i1{background:var(--lila)}.i2{background:var(--teal-soft)}.i3{background:#fff3dc}.i4{background:#fde8e3}.i5{background:#e6efff}
+.card p{margin:0;color:var(--muted);font-size:.95rem}
+/* por qué */
+.why{background:#fff;border-block:1px solid var(--line)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+.split img{border-radius:var(--r);box-shadow:var(--shadow);aspect-ratio:4/3;object-fit:cover;width:100%}
+@media(max-width:860px){.split{grid-template-columns:1fr}}
+.quote{border-left:4px solid var(--teal);padding:6px 0 6px 18px;margin:22px 0 0;font-size:1.05rem;color:var(--ink);font-weight:500}
+/* módulos */
+.mods{display:grid;gap:18px;margin-top:30px}
+details.mod{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:0 4px 16px rgba(43,40,120,.05)}
+details.mod summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:120px 1fr auto;gap:20px;align-items:center;padding:16px 22px 16px 16px}
+details.mod summary::-webkit-details-marker{display:none}
+.mod .thumb{width:120px;height:92px;border-radius:14px;object-fit:cover}
+.mod .num{font-weight:800;font-size:.8rem;letter-spacing:.1em;color:var(--teal);text-transform:uppercase}
+.mod h3{margin:.15em 0 .1em}
+.mod .tag{color:var(--muted);font-size:.93rem}
+.mod .plus{width:36px;height:36px;border-radius:50%;background:var(--lila);display:grid;place-items:center;font-weight:800;color:var(--indigo);transition:transform .2s}
+details[open] .plus{transform:rotate(45deg)}
+.mod .body{padding:0 26px 26px 26px;display:grid;grid-template-columns:1.3fr 1fr;gap:28px}
+.mod ul{margin:0;padding-left:20px}
+.mod li{margin:.35em 0}
+.box{background:var(--bg);border-radius:16px;padding:18px}
+.box h4{margin:0 0 6px;font-size:.95rem;color:var(--indigo)}
+.box p{margin:0 0 12px;font-size:.93rem;color:var(--muted)}
+.box p:last-child{margin:0}
+@media(max-width:760px){details.mod summary{grid-template-columns:72px 1fr auto;gap:14px}.mod .thumb{width:72px;height:72px}.mod .body{grid-template-columns:1fr}}
+/* vibroacústica y AUMI */
+.feature{background:linear-gradient(135deg,var(--indigo-2),#4b3fb5 55%,var(--teal));color:#fff}
+.feature .lead,.feature p{color:#e7e5ff}
+.feature .eyebrow{color:#9ff0e6}
+.videos{display:grid;grid-template-columns:1.25fr 1fr;gap:22px;margin-top:30px}
+.videos .side{display:grid;gap:22px}
+@media(max-width:860px){.videos{grid-template-columns:1fr}}
+.vid{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:var(--r);overflow:hidden}
+.yt{position:relative;aspect-ratio:16/9;background:#000;cursor:pointer;border:0;padding:0;width:100%;display:block}
+.yt img{width:100%;height:100%;object-fit:cover;opacity:.88}
+.yt .play{position:absolute;inset:0;display:grid;place-items:center}
+.yt .play span{width:68px;height:48px;border-radius:14px;background:#e3342f;display:grid;place-items:center;color:#fff;font-size:1.3rem;box-shadow:0 6px 18px rgba(0,0,0,.35)}
+.yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vid .cap{padding:14px 18px;font-size:.92rem}
+.vid .cap b{display:block;color:#fff}
+.vid .cap small{color:#cfcaf7}
+.steps{counter-reset:s;display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:30px}
+@media(max-width:860px){.steps{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.steps{grid-template-columns:1fr}}
+.step{background:rgba(255,255,255,.1);border-radius:18px;padding:18px}
+.step::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--sun);color:var(--indigo-2);font-weight:800;margin-bottom:10px}
+.step p{margin:0;font-size:.93rem}
+.vibro{display:grid;grid-template-columns:.8fr 1.2fr;gap:44px;align-items:center}
+.vibro img{border-radius:var(--r);box-shadow:var(--shadow);aspect-ratio:3/3.6;object-fit:cover;width:100%}
+@media(max-width:860px){.vibro{grid-template-columns:1fr}}
+.pill-list{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.pill-list span{background:var(--teal-soft);color:#0b5f59;border-radius:999px;padding:6px 14px;font-weight:600;font-size:.88rem}
+/* formato y horas */
+.table{width:100%;border-collapse:separate;border-spacing:0;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;font-size:.95rem}
+.table th,.table td{padding:13px 16px;text-align:left;border-bottom:1px solid var(--line)}
+.table th{background:var(--lila);color:var(--indigo-2);font-weight:700}
+.table tr:last-child td{border-bottom:0;font-weight:700}
+.table td:not(:first-child),.table th:not(:first-child){text-align:center}
+.scroll{overflow-x:auto}
+.kit{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:26px}
+@media(max-width:820px){.kit{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.kit{grid-template-columns:1fr}}
+.kit div{background:#fff;border:1px dashed #c9c3ee;border-radius:16px;padding:16px 18px;font-weight:600}
+.kit div small{display:block;color:var(--muted);font-weight:500;font-size:.86rem}
+/* evaluación */
+.bars{display:grid;gap:14px;margin-top:24px}
+.bar{display:grid;grid-template-columns:240px 1fr 54px;gap:14px;align-items:center;font-weight:600;font-size:.95rem}
+.bar .track{height:14px;background:var(--line);border-radius:999px;overflow:hidden}
+.bar .fill{height:100%;background:linear-gradient(90deg,var(--indigo),var(--teal));border-radius:999px}
+@media(max-width:600px){.bar{grid-template-columns:1fr 54px}.bar .track{grid-column:1/-1;order:3}}
+/* equipo */
+.team{display:grid;grid-template-columns:300px 1fr;gap:40px;align-items:center}
+.team img{border-radius:var(--r);aspect-ratio:3/3.7;object-fit:cover;width:100%;box-shadow:var(--shadow)}
+@media(max-width:820px){.team{grid-template-columns:1fr}.team img{max-width:320px}}
+.role{display:inline-block;background:var(--lila);color:var(--indigo-2);font-weight:700;font-size:.85rem;padding:6px 12px;border-radius:999px;margin-bottom:12px}
+.team ul{padding-left:20px;color:var(--muted)}
+.team li{margin:.35em 0}
+.cta{background:#fff;border:1px solid var(--line);border-radius:28px;padding:40px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;box-shadow:var(--shadow)}
+@media(max-width:760px){.cta{grid-template-columns:1fr;padding:28px}}
+/* logos institucionales */
+.inst{display:inline-flex;align-items:center;gap:22px;background:var(--indigo-2);border-radius:20px;padding:14px 22px;margin-bottom:26px;box-shadow:var(--shadow)}
+.inst .umce{height:46px;width:auto}
+.inst .senadis{height:62px;width:auto;border-radius:6px}
+.inst .sep{width:1px;align-self:stretch;background:rgba(255,255,255,.25)}
+@media(max-width:420px){.inst{gap:14px;padding:12px 16px}.inst .umce{height:36px}.inst .senadis{height:50px}}
+footer{padding:44px 0 56px;color:#cfcaf7;font-size:.85rem;background:var(--indigo-2)}
+footer p{margin:.3em 0}
+footer b{color:#fff}
+footer .flogos{display:flex;align-items:center;gap:24px;margin-bottom:22px;flex-wrap:wrap}
+footer .flogos .umce{height:42px;width:auto}
+footer .flogos .senadis{height:58px;width:auto;border-radius:6px}
+.note{font-size:.85rem;color:var(--muted);margin-top:14px}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#">UMCE <span>×</span> Academia SENADIS</a>
+    <nav class="nav" aria-label="Secciones">
+      <a href="#por-que">Por qué</a>
+      <a href="#ruta">Módulos</a>
+      <a href="#aumi">AUMI</a>
+      <a href="#formato">Formato</a>
+      <a href="#equipo">Equipo</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- PORTADA -->
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="inst" role="img" aria-label="Universidad Metropolitana de Ciencias de la Educación (UMCE) y Servicio Nacional de la Discapacidad (SENADIS)">
+        <img class="umce" src="img/logo_umce_blanco.png" alt="UMCE">
+        <span class="sep"></span>
+        <img class="senadis" src="img/logo_senadis.png" alt="SENADIS, Ministerio de Desarrollo Social y Familia, Gobierno de Chile">
+      </div><br>
+      <span class="eyebrow">Propuesta de curso e-learning · 2027</span>
+      <h1>Arte, sonido y música <em>para la inclusión</em></h1>
+      <p class="lead">Herramientas artísticas y sonoro-musicales para el trabajo con estudiantes con discapacidad. Un curso práctico para que profesionales de la educación de todo Chile lleven al aula la arteterapia, la música, la vibración y la tecnología musical accesible.</p>
+      <div class="chips">
+        <span class="chip"><b>36</b> horas</span>
+        <span class="chip"><b>100%</b> asincrónico</span>
+        <span class="chip"><b>6</b> módulos</span>
+        <span class="chip">Certifica <b>UMCE</b></span>
+        <span class="chip">Academia <b>SENADIS</b></span>
+      </div>
+      <div class="btns">
+        <a class="btn pri" href="#ruta">Ver los 6 módulos</a>
+        <a class="btn sec" href="#aumi">Ver AUMI en acción</a>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="img/hero.jpg" alt="Mesa con instrumentos musicales: tambores, maracas, cuencos, metalófono y teclado">
+      <div class="badge">Sin experiencia previa<small>No se necesita saber música ni dibujar</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- QUÉ APRENDERÁN -->
+<section>
+  <div class="wrap">
+    <span class="eyebrow">Qué aprenderán</span>
+    <h2>Cinco caminos para expresarse, comunicarse y aprender</h2>
+    <p class="lead">El curso reúne cinco miradas que rara vez se enseñan juntas, y las convierte en actividades concretas para la sala de clases.</p>
+    <div class="grid g5" style="margin-top:28px">
+      <div class="card"><div class="ico i1">🎨</div><h3>Arteterapia</h3><p>Pintura, modelado, collage y cuerpo para expresar lo que no se dice con palabras.</p></div>
+      <div class="card"><div class="ico i2">🎵</div><h3>Didáctica musical</h3><p>Enseñar música con Dalcroze, Murray Schafer y Música en Colores.</p></div>
+      <div class="card"><div class="ico i3">🥁</div><h3>Musicoterapia y vibración</h3><p>Canción, improvisación, voz, juego y vibroacústica para comunicar y regular.</p></div>
+      <div class="card"><div class="ico i4">📷</div><h3>Tecnología AUMI</h3><p>Software gratuito que convierte un gesto captado por la cámara en música.</p></div>
+      <div class="card"><div class="ico i5">🧠</div><h3>Neurociencia</h3><p>Por qué la música transforma el cerebro y cómo aplicarlo con responsabilidad.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- POR QUÉ -->
+<section class="why" id="por-que">
+  <div class="wrap split">
+    <div>
+      <span class="eyebrow">Por qué este curso</span>
+      <h2>Para muchos estudiantes, el arte y la música son su principal forma de comunicarse</h2>
+      <p class="lead">Docentes, educadoras diferenciales, fonoaudiólogos, terapeutas ocupacionales, psicólogos y asistentes de la educación valoran la música y el arte, pero suelen tener pocas herramientas para adaptarlos y aplicarlos con intención.</p>
+      <p>Este curso cierra esa brecha desde un enfoque de derechos, centrado en la persona y en sus capacidades, y alineado con la diversificación de la enseñanza y el Diseño Universal para el Aprendizaje (DUA).</p>
+      <p class="quote">Lo importante no es el resultado artístico, sino el proceso: un espacio sin juicios donde cada estudiante encuentra su propia voz.</p>
+    </div>
+    <img src="img/m3.jpg" alt="Grupo de personas moviéndose libremente por una sala durante una actividad corporal con música" loading="lazy">
+  </div>
+</section>
+
+<!-- MÓDULOS -->
+<section id="ruta">
+  <div class="wrap">
+    <span class="eyebrow">Ruta de aprendizaje</span>
+    <h2>6 módulos, 6 horas cada uno</h2>
+    <p class="lead">Cada módulo parte con una vivencia en primera persona, sigue con los fundamentos y termina con una práctica para aplicar en el propio establecimiento. Toca cada módulo para ver sus contenidos.</p>
+
+    <div class="mods">
+      <details class="mod" open>
+        <summary><img class="thumb" src="img/m1.jpg" alt="" loading="lazy"><div><div class="num">Módulo 1</div><h3>Escuchar para incluir</h3><div class="tag">Sonido, cuerpo y derechos</div></div><span class="plus" aria-hidden="true">+</span></summary>
+        <div class="body">
+          <ul>
+            <li>Enfoque de derechos y modelo social de la discapacidad; uso correcto del lenguaje según las recomendaciones de SENADIS.</li>
+            <li>El arte y la música como derecho cultural y como medio de expresión y comunicación en la escuela.</li>
+            <li>Murray Schafer: apertura al mundo sonoro, conciencia auditiva y paisajes sonoros.</li>
+            <li>Parámetros del sonido (altura, timbre, duración, intensidad) y su relación con la regulación y el bienestar.</li>
+            <li>Observar antes de intervenir: la evaluación centrada en el estudiante del enfoque Jan Van Dijk.</li>
+          </ul>
+          <div class="box">
+            <h4>Práctica aplicada</h4><p>Grabar el paisaje sonoro de la sala de clases y analizar cómo influye en los estudiantes.</p>
+            <h4>Recurso</h4><p>Banco de paisajes sonoros y pauta de observación.</p>
+          </div>
+        </div>
+      </details>
+
+      <details class="mod">
+        <summary><img class="thumb" src="img/m2.jpg" alt="" loading="lazy"><div><div class="num">Módulo 2</div><h3>Arteterapia en la escuela</h3><div class="tag">Expresarse más allá de las palabras</div></div><span class="plus" aria-hidden="true">+</span></summary>
+        <div class="body">
+          <ul>
+            <li>Qué es la arteterapia: el proceso creativo como camino para expresar emociones y pensamientos; el valor del proceso sobre el resultado.</li>
+            <li>Beneficios: comunicación no verbal, desarrollo de la motricidad, reducción de la ansiedad y el estrés, autoestima.</li>
+            <li>Técnicas: dibujo y pintura, modelado con arcilla, collage, psicoplástica (Verónica Barraza), mural colectivo, dibujo con música y cuento sonoro.</li>
+            <li>Adaptaciones según discapacidad: espectro autista (creación compartida para lo social), discapacidad física (adaptadores, pintar con pies o boca), visual (texturas, tacto, sonido y olfato), auditiva (expresión sin lenguaje oral), intelectual y múltiple.</li>
+            <li>Encuadre y cuidado: qué puede hacer un docente y cuándo derivar.</li>
+          </ul>
+          <div class="box">
+            <h4>Práctica aplicada</h4><p>Aplicar una técnica plástica con música en el curso y registrar el proceso.</p>
+            <h4>Recurso</h4><p>Fichas de técnicas de arteterapia con sus adaptaciones.</p>
+          </div>
+        </div>
+      </details>
+
+      <details class="mod">
+        <summary><img class="thumb" src="img/m3.jpg" alt="" loading="lazy"><div><div class="num">Módulo 3</div><h3>Didáctica musical inclusiva</h3><div class="tag">Cómo enseñar música a todos los estudiantes</div></div><span class="plus" aria-hidden="true">+</span></summary>
+        <div class="body">
+          <ul>
+            <li>Elementos de la música: pulso, ritmo, métrica, melodía y frase.</li>
+            <li>Método Dalcroze: aprender música con el cuerpo y el movimiento.</li>
+            <li>Música en Colores (Estela Cabezas): lectura musical por colores, accesible para estudiantes con discapacidad intelectual.</li>
+            <li>El juego musical y las canciones como base de la clase.</li>
+            <li>Construcción de instrumentos con materiales reciclados y planificación con DUA.</li>
+          </ul>
+          <div class="box">
+            <h4>Práctica aplicada</h4><p>Enseñar una canción breve con Música en Colores y movimiento Dalcroze.</p>
+            <h4>Recurso</h4><p>Cancionero y plantillas de Música en Colores para imprimir.</p>
+          </div>
+        </div>
+      </details>
+
+      <details class="mod">
+        <summary><img class="thumb" src="img/m4.jpg" alt="" loading="lazy"><div><div class="num">Módulo 4</div><h3>Recursos desde la musicoterapia y la vibroacústica</h3><div class="tag">La música como puente de comunicación</div></div><span class="plus" aria-hidden="true">+</span></summary>
+        <div class="body">
+          <ul>
+            <li>Diferencias entre educación musical, actividad musical y musicoterapia.</li>
+            <li>Musicoterapia Creativa Nordoff-Robbins: la improvisación para encontrarse con el estudiante.</li>
+            <li>La canción, la voz y el canto para la comunicación y la memoria; el juego y las rutinas sonoras de anticipación.</li>
+            <li>El sonido que se siente: vibración y percepción táctil para estudiantes sordos o con hipoacusia.</li>
+            <li>Vibroacústica: sonidos de baja frecuencia que se perciben en el cuerpo, el mat vibroacústico y su uso para la regulación sensorial.</li>
+            <li>Estudio de casos.</li>
+          </ul>
+          <div class="box">
+            <h4>Práctica aplicada</h4><p>Diseñar una rutina sonora de bienvenida y despedida para un estudiante o curso.</p>
+            <h4>Recurso</h4><p>Repertorio de canciones de rutina y guía de experiencias vibrotáctiles con materiales simples.</p>
+          </div>
+        </div>
+      </details>
+
+      <details class="mod">
+        <summary><img class="thumb" src="img/aumi.jpg" alt="" loading="lazy"><div><div class="num">Módulo 5</div><h3>Tecnología musical accesible: AUMI</h3><div class="tag">Hacer música con un gesto</div></div><span class="plus" aria-hidden="true">+</span></summary>
+        <div class="body">
+          <ul>
+            <li>Qué es AUMI (Adaptive Use Musical Instruments), del Deep Listening Institute: software para computador (Mac y Windows) y app gratuita para iPhone y iPad.</li>
+            <li>Descarga, instalación y configuración paso a paso: cámara, seguimiento del movimiento, zonas, sonidos y escalas.</li>
+            <li>Actividades: causa y efecto, turnos, improvisación grupal, acompañar canciones.</li>
+            <li>La experiencia de Musicoterapia y Tecnología Musical en la Escuela Especial Jan Van Dijk (Corpaliv).</li>
+            <li>Otras tecnologías: Soundbeam, EyeHarp, switches y aplicaciones de vibración y visualización del sonido.</li>
+          </ul>
+          <div class="box">
+            <h4>Práctica aplicada</h4><p>Instalar AUMI, configurarlo para un estudiante y grabar un minuto de uso.</p>
+            <h4>Recurso</h4><p>Guía de AUMI en español, paso a paso.</p>
+          </div>
+        </div>
+      </details>
+
+      <details class="mod">
+        <summary><img class="thumb" src="img/m6.jpg" alt="" loading="lazy"><div><div class="num">Módulo 6</div><h3>Música y neurociencia + proyecto final</h3><div class="tag">Técnicas basadas en Musicoterapia Neurológica</div></div><span class="plus" aria-hidden="true">+</span></summary>
+        <div class="body">
+          <ul>
+            <li>Música y cerebro: percepción, emoción, memoria y movimiento; plasticidad y entrenamiento musical.</li>
+            <li>Desarrollo musical y su relación con las áreas motriz, cognitiva, afectiva y social.</li>
+            <li>Musicoterapia Neurológica (Michael Thaut): qué es y cuáles son sus técnicas.</li>
+            <li>Actividades para el aula basadas en esas técnicas: ritmo para el movimiento, instrumentos para la motricidad, canto para la memoria y el lenguaje, música para la atención y las funciones ejecutivas.</li>
+            <li>Límites del rol docente y trabajo con especialistas.</li>
+            <li>Planificación y evaluación de la experiencia artístico-musical; el "diagnóstico sonoro".</li>
+          </ul>
+          <div class="box">
+            <h4>Proyecto final</h4><p>Planificar y aplicar una experiencia artístico-musical adaptada, con un video breve y una reflexión.</p>
+            <h4>Recurso</h4><p>Planificador de experiencias con DUA.</p>
+          </div>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- AUMI -->
+<section class="feature" id="aumi">
+  <div class="wrap">
+    <span class="eyebrow">Módulo 5 en acción</span>
+    <h2>AUMI: cuando el cuerpo no alcanza el instrumento, el instrumento va hacia el cuerpo</h2>
+    <p class="lead">Con una cámara y un software gratuito, un pequeño movimiento de la cabeza, la mano o los ojos se transforma en música. Para estudiantes con movilidad reducida y sin lenguaje oral, puede ser una de sus pocas vías de expresión.</p>
+    <div class="videos">
+      <div class="vid">
+        <button class="yt" data-id="NAr3nqUiPG8" aria-label="Reproducir video: Musicoterapia y Tecnología Musical. Software AUMI. CORPALIV">
+          <img src="https://i.ytimg.com/vi/NAr3nqUiPG8/hqdefault.jpg" alt="" loading="lazy"><span class="play"><span>▶</span></span>
+        </button>
+        <div class="cap"><b>Musicoterapia y Tecnología Musical con AUMI · Corpaliv</b><small>Experiencia del relator en la Escuela Especial Jan Van Dijk</small></div>
+      </div>
+      <div class="side">
+        <div class="vid">
+          <button class="yt" data-id="I06P39732As" aria-label="Reproducir video: Tutorial inicios con AUMI">
+            <img src="https://i.ytimg.com/vi/I06P39732As/hqdefault.jpg" alt="" loading="lazy"><span class="play"><span>▶</span></span>
+          </button>
+          <div class="cap"><b>Tutorial: primeros pasos con AUMI</b><small>Canal Encuentro Musicoterapia</small></div>
+        </div>
+        <div class="vid">
+          <button class="yt" data-id="KxKp8hy-aoc" aria-label="Reproducir video: The Eye Harp, demostración">
+            <img src="https://i.ytimg.com/vi/KxKp8hy-aoc/hqdefault.jpg" alt="" loading="lazy"><span class="play"><span>▶</span></span>
+          </button>
+          <div class="cap"><b>Otra tecnología: EyeHarp, música con la mirada</b><small>Canal Play Anything Music Therapy</small></div>
+        </div>
+      </div>
+    </div>
+    <div class="steps">
+      <div class="step"><p><b>Descargar</b> AUMI gratis en aumiapp.com o en la App Store.</p></div>
+      <div class="step"><p><b>Configurar</b> la cámara y elegir qué parte del cuerpo se sigue.</p></div>
+      <div class="step"><p><b>Elegir</b> sonidos, escalas y zonas según cada estudiante.</p></div>
+      <div class="step"><p><b>Jugar</b>: causa y efecto, turnos e improvisación grupal.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- VIBROACÚSTICA -->
+<section>
+  <div class="wrap vibro">
+    <img src="img/vibro.jpg" alt="Persona recostada en una camilla vibroacústica mientras el relator hace sonar un cuenco sobre su pecho" loading="lazy">
+    <div>
+      <span class="eyebrow">Módulo 4 · Novedad</span>
+      <h2>El sonido que se siente en el cuerpo</h2>
+      <p class="lead">La música no solo se escucha: también se siente. Los sonidos de baja frecuencia viajan por el cuerpo como vibración, una puerta de entrada para estudiantes sordos o con hipoacusia y para quienes necesitan apoyo en su regulación sensorial.</p>
+      <p>Los participantes conocerán la vibroacústica y el mat vibroacústico, y aprenderán experiencias vibrotáctiles posibles en cualquier escuela, con parlantes, superficies, instrumentos de percusión y cuencos.</p>
+      <div class="pill-list"><span>Percepción táctil</span><span>Ritmo visual y corporal</span><span>Regulación sensorial</span><span>Estudiantes sordos</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- FORMATO -->
+<section class="why" id="formato">
+  <div class="wrap">
+    <span class="eyebrow">Formato 100% asincrónico</span>
+    <h2>Cada participante avanza a su ritmo, desde cualquier lugar de Chile</h2>
+    <p class="lead">El curso está pensado para docentes con poco tiempo: piezas cortas, claras y aplicables, accesibles desde el computador o el celular.</p>
+    <div class="grid g3" style="margin:28px 0 34px">
+      <div class="card"><div class="ico i1">🎬</div><h3>Cápsulas de video</h3><p>Videos breves, subtitulados, grabados en un setting real con instrumentos y materiales.</p></div>
+      <div class="card"><div class="ico i2">🧩</div><h3>Actividades interactivas</h3><p>Ejercicios accesibles en el aula virtual, del mismo tipo que los del curso UMCE–SENADIS.</p></div>
+      <div class="card"><div class="ico i3">🏫</div><h3>Práctica en el aula</h3><p>Cada módulo termina con algo que se prueba con los propios estudiantes.</p></div>
+    </div>
+    <div class="scroll">
+      <table class="table">
+        <thead><tr><th>Por módulo</th><th>Cápsulas</th><th>Lectura ilustrada</th><th>Actividad interactiva</th><th>Práctica aplicada</th><th>Foro</th><th>Total</th></tr></thead>
+        <tbody>
+          <tr><td>Cada uno de los 6 módulos</td><td>1,5 h</td><td>1 h</td><td>1 h</td><td>1,5 h</td><td>1 h</td><td>6 h</td></tr>
+          <tr><td>Curso completo</td><td>9 h</td><td>6 h</td><td>6 h</td><td>9 h</td><td>6 h</td><td>36 h</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 style="margin-top:44px">Kit de recursos descargable</h3>
+    <div class="kit">
+      <div>Cancionero<small>Canciones de rutina y juego</small></div>
+      <div>Plantillas Música en Colores<small>Listas para imprimir</small></div>
+      <div>Banco de paisajes sonoros<small>Audios para escuchar y crear</small></div>
+      <div>Fichas de arteterapia<small>Técnicas con sus adaptaciones</small></div>
+      <div>Guía de AUMI en español<small>Instalación y actividades</small></div>
+      <div>Planificador con DUA<small>Para el proyecto final</small></div>
+    </div>
+
+    <h3 style="margin-top:44px">Evaluación</h3>
+    <div class="bars">
+      <div class="bar"><span>Actividades interactivas</span><div class="track"><div class="fill" style="width:20%"></div></div><b>20%</b></div>
+      <div class="bar"><span>Participación en foros</span><div class="track"><div class="fill" style="width:15%"></div></div><b>15%</b></div>
+      <div class="bar"><span>Prácticas aplicadas</span><div class="track"><div class="fill" style="width:30%"></div></div><b>30%</b></div>
+      <div class="bar"><span>Proyecto final</span><div class="track"><div class="fill" style="width:35%"></div></div><b>35%</b></div>
+    </div>
+    <p class="note">Accesibilidad: videos con subtítulos, PDF accesibles y actividades navegables con teclado.</p>
+  </div>
+</section>
+
+<!-- EQUIPO -->
+<section id="equipo">
+  <div class="wrap team">
+    <img src="img/relator.jpg" alt="Reinaldo Farías Serey sosteniendo una maraca" loading="lazy">
+    <div>
+      <span class="eyebrow">Equipo</span>
+      <h2>Reinaldo Farías Serey</h2>
+      <span class="role">Relator líder y diseño instruccional</span>
+      <p>Junto al equipo docente del proyecto UMCE–SENADIS.</p>
+      <ul>
+        <li>Musicoterapeuta (Postítulo en Arte Terapias, mención Musicoterapia, Universidad de Chile) y profesor de Educación Musical (Universidad de Concepción).</li>
+        <li>Magíster en Docencia Universitaria (Universidad SEK). Tramo Experto II del Sistema de Desarrollo Profesional Docente.</li>
+        <li>Musicoterapeuta de personas con discapacidad, sus cuidadores y profesionales en Corpaliv (2013–2024), donde desarrolló el servicio de Musicoterapia y Tecnología Musical con AUMI y Soundbeam.</li>
+        <li>Creador y docente de la asignatura "Didáctica artística y musical en discapacidad intelectual" (Pedagogía en Educación Diferencial, Universidad SEK), base de este curso.</li>
+        <li>Expositor en el XIII Congreso Iberoamericano de Inclusión Educativa con Tecnologías Emergentes (2019) y fundador de Sonofrecuencia.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="cta">
+      <div>
+        <h2 style="margin-bottom:.3em">Un curso para que la inclusión también suene</h2>
+        <p class="lead" style="margin:0">Propuesta de la Universidad Metropolitana de Ciencias de la Educación para la Academia SENADIS.</p>
+      </div>
+      <a class="btn pri" href="#ruta">Revisar los módulos</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="flogos">
+      <img class="umce" src="img/logo_umce_blanco.png" alt="UMCE">
+      <img class="senadis" src="img/logo_senadis.png" alt="SENADIS, Ministerio de Desarrollo Social y Familia, Gobierno de Chile">
+    </div>
+    <p><b>Arte, sonido y música para la inclusión</b> · Propuesta UMCE para Academia SENADIS · 2026</p>
+    <p>Créditos: interfaz de AUMI © Deep Listening Institute (aumiapp.com). Videos: canal refarias1, Encuentro Musicoterapia y Play Anything Music Therapy (YouTube). Ilustración del módulo 6 generada con IA. Fotografías: Sonofrecuencia.</p>
+  </div>
+</footer>
+
+<script>
+// Los videos se cargan solo al tocarlos (página más liviana)
+document.querySelectorAll('.yt').forEach(function (b) {
+  b.addEventListener('click', function () {
+    var f = document.createElement('iframe');
+    f.src = 'https://www.youtube-nocookie.com/embed/' + b.dataset.id + '?autoplay=1&rel=0';
+    f.title = b.getAttribute('aria-label');
+    f.allow = 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture';
+    f.allowFullscreen = true;
+    var holder = document.createElement('div'); holder.className = 'yt';
+    holder.appendChild(f); b.replaceWith(holder);
+  });
+});
+</script>
+</body>
+</html>
